@@ -1,11 +1,6 @@
 ﻿@{
 	ViewBag.Title = "Index";
 }
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="http://twitter.github.com/hogan.js/builds/3.0.1/hogan-3.0.1.js"></script>
-
-<link href="~/Content/Home.css" rel="stylesheet" />
-
 <h2>Index</h2>
 
 
@@ -30,6 +25,7 @@
 			{ "name": "rip" }
 		]
 	};
+	debugger;
 	var template = Hogan.compile($('#reposTemplate').html());
 	$('#repos').html(template.render(repos));
 </script>

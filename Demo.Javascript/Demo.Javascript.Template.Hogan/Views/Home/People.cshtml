@@ -1,0 +1,47 @@
+﻿@using Demo.Javascript.Template.Hogan.Models
+@model List<Person>
+
+@{
+	ViewBag.Title = "People";
+}
+
+<h2>People</h2>
+
+<div id="peopleTemplate" class="template">
+	<table>
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#people}}
+			<tr>
+				<td>{{FirstName}}</td>
+				<td>{{LastName}}</td>
+			</tr>
+			{{/people}}
+		</tbody>
+	</table>
+</div>
+
+<div id="main"></div>
+
+<script language="javascript">
+	debugger;
+	//var data = { "people" : @Html.Raw(Json.Encode(@Model)) };
+	var data = {
+		"people": [
+			{ "FirstName": "John", "LastName": "Doe" },
+			{ "FirstName": "Jane", "LastName": "Doe" },
+			{ "FirstName": "Robert", "LastName": "Smith" },
+			{ "FirstName": "Mike", "LastName": "Durden" },
+			{ "FirstName": "Marilin", "LastName": "Monroe" }
+		]
+	};
+	var html = $("#peopleTemplate").html();
+	var template = Hogan.compile(html);
+	var rendered = template.render(data);
+	$("#main").html(rendered);
+</script>
