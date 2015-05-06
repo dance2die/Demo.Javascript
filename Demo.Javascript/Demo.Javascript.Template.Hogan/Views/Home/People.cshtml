@@ -1,5 +1,6 @@
-﻿@using Demo.Javascript.Template.Hogan.Models
-@model List<Person>
+﻿@using System.Web.Helpers
+@using Demo.Javascript.Template.Hogan.Models
+@model System.Collections.Generic.List<Person>
 
 @{
 	ViewBag.Title = "People";
@@ -32,16 +33,16 @@
 
 <script language="javascript">
 	debugger;
-	//var data = { "people" : @Html.Raw(Json.Encode(@Model)) };
-	var data = {
-		"people": [
-			{ "FirstName": "John", "LastName": "Doe" },
-			{ "FirstName": "Jane", "LastName": "Doe" },
-			{ "FirstName": "Robert", "LastName": "Smith" },
-			{ "FirstName": "Mike", "LastName": "Durden" },
-			{ "FirstName": "Marilin", "LastName": "Monroe" }
-		]
-	};
+	var data = { "people" : @Html.Raw(Json.Encode(@Model)) };
+	//var data = {
+	//	"people": [
+	//		{ "FirstName": "John", "LastName": "Doe" },
+	//		{ "FirstName": "Jane", "LastName": "Doe" },
+	//		{ "FirstName": "Robert", "LastName": "Smith" },
+	//		{ "FirstName": "Mike", "LastName": "Durden" },
+	//		{ "FirstName": "Marilin", "LastName": "Monroe" }
+	//	]
+	//};
 	var html = $("#peopleTemplate").html();
 	var template = Hogan.compile(html);
 	var rendered = template.render(data);
