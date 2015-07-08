@@ -1,0 +1,50 @@
+﻿@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Script {
+	<script type="text/javascript">
+		// JSON data binding
+		// http://www.jqwidgets.com/jquery-widgets-demo/demos/jqxgrid/index.htm#demos/jqxgrid/bindingtojson.htm
+		$(document).ready(function() {
+			var url = "../../sampledata/beverages.txt";
+			// prepare the data
+			var source =
+			{
+				datatype: "json",
+				datafields: [
+					{ name: 'name', type: 'string' },
+					{ name: 'type', type: 'string' },
+					{ name: 'calories', type: 'int' },
+					{ name: 'totalfat', type: 'string' },
+					{ name: 'protein', type: 'string' }
+				],
+				id: 'id',
+				url: url
+			};
+			var dataAdapter = new $.jqx.dataAdapter(source);
+
+			$("#jqxgrid").jqxGrid(
+			{
+				width: 850,
+				source: dataAdapter,
+				columnsresize: true,
+				columns: [
+					{ text: 'Name', datafield: 'name', width: 250 },
+					{ text: 'Beverage Type', datafield: 'type', width: 250 },
+					{ text: 'Calories', datafield: 'calories', width: 180 },
+					{ text: 'Total Fat', datafield: 'totalfat', width: 120 },
+					{ text: 'Protein', datafield: 'protein', minwidth: 120 }
+				]
+			});
+		});
+	</script>
+}
+
+<h2>Index</h2>
+
+
+<div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+	<div id="jqxgrid"></div>
+</div>

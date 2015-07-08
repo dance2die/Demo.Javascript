@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+
+	<link href="~/Scripts/jqwidgets/styles/jqx.base.css" rel="stylesheet" />
+	<link href="~/Scripts/jqwidgets/styles/jqx.bootstrap.css" rel="stylesheet" />
+
+	@RenderSection("CSS", false)
+
+	<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+
+	<script src="~/Scripts/jqwidgets/jqxcore.js"></script>
+	<script src="~/Scripts/jqwidgets/jqxbuttons.js"></script>
+	<script src="~/Scripts/jqwidgets/jqxscrollbar.js"></script>
+	<script src="~/Scripts/jqwidgets/jqxmenu.js"></script>
+	<script src="~/Scripts/jqwidgets/jqxgrid.js"></script>
+	<script src="~/Scripts/jqwidgets/jqxgrid.selection.js"></script>
+	<script src="~/Scripts/jqwidgets/jqxgrid.columnsresize.js"></script>
+	<script src="~/Scripts/jqwidgets/jqxdata.js"></script>
+
+	@RenderSection("Script", false)
+
+
+
+
+	<title>@ViewBag.Title</title>
+</head>
+<body>
+	<div>
+		@RenderBody()
+	</div>
+</body>
+</html>
