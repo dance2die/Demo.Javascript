@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Javascript.Template.Ho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Javascript.AngularJs.AngularUIGrid", "Demo.Javascript.AngularJs.AngularUIGrid\Demo.Javascript.AngularJs.AngularUIGrid.csproj", "{6207BD5E-4460-405E-8846-EA1C9371E80C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Javascript.JqWidgets", "Demo.Javascript.JqWidgets\Demo.Javascript.JqWidgets.csproj", "{F68E6A4F-559A-4CD9-A51F-EE82C2C970F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6207BD5E-4460-405E-8846-EA1C9371E80C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6207BD5E-4460-405E-8846-EA1C9371E80C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6207BD5E-4460-405E-8846-EA1C9371E80C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F68E6A4F-559A-4CD9-A51F-EE82C2C970F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F68E6A4F-559A-4CD9-A51F-EE82C2C970F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F68E6A4F-559A-4CD9-A51F-EE82C2C970F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F68E6A4F-559A-4CD9-A51F-EE82C2C970F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
