@@ -1,0 +1,19 @@
+﻿@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section CSS {
+	<link href="~/Content/Home.css" rel="stylesheet" />
+}
+
+@section Script {
+	<script src="~/Scripts/Home.js"></script>
+}
+
+<h2>Index</h2>
+
+<div ng-controller="MainCtrl">
+	<div id="grid1" ui-grid="gridOptions" ui-grid-edit class="grid"></div>
+</div>
+
