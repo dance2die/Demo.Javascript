@@ -6,12 +6,11 @@ using System.Web.Mvc;
 
 namespace Demo.Javascript.JqWidgets.Controllers
 {
-    public class HomeController : Controller
-    {
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-    }
+	public class HomeController : Controller
+	{
+		public ActionResult Index()
+		{
+			return View();
+		}
+	}
 }
